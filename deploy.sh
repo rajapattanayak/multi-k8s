@@ -1,6 +1,6 @@
-docker build -t praja/multi-client:latest -t praja/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t praja/multi-server:latest -t praja/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t praja/multi-worker:latest -t praja/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t praja/multi-client:latest -t praja/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t praja/multi-server:latest -t praja/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t praja/multi-worker:latest -t praja/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 docker push praja/multi-client:latest
 docker push praja/multi-server:latest
